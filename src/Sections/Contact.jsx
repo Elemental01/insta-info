@@ -1,6 +1,6 @@
     import { useState, useRef } from "react";
     import { instagram, github, twitter } from "../assets";
-    import emailjs from 'emailjs-com';
+    import emailjs from '@emailjs/browser';
 
     const Contact = () => {
       const formRef = useRef();
