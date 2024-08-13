@@ -8,7 +8,7 @@ const fetchInstagramData = async (userId) => {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': 'dd63d613a8mshdfcd6c0c6021f89p1c6202jsn84b471023ef5',
+      'x-rapidapi-key': import.meta.env.VITE_KEY_RAPID_API,
       'x-rapidapi-host': 'instagram-scraper-api2.p.rapidapi.com'
     }
   };
@@ -30,7 +30,7 @@ const downloadImage = async (url) => {
   try {
     const response = await fetch(corsProxy + url, {
       headers: {
-        'x-cors-api-key': 'temp_94c8dd305abd2c94015e3a41b09eae70'
+        'x-cors-api-key':  import.meta.env.VITE_KEY_CORS_API_KEY
       }
     });
     if (!response.ok) throw new Error('Network response was not ok');
